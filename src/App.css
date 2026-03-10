@@ -1,0 +1,37 @@
+/* ── App layout ────────────────────────────────────────────────────────────── */
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-main {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 20px;
+  padding: 20px 24px 60px;
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  flex: 1;
+}
+
+.app-left  { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.app-right { display: flex; flex-direction: column; gap: 14px; }
+
+/* ── Panel card ────────────────────────────────────────────────────────────── */
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 20px;
+}
+
+/* ── Responsive ────────────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .app-main {
+    grid-template-columns: 1fr;
+    padding: 16px 14px 48px;
+    gap: 14px;
+  }
+}
